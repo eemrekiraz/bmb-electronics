@@ -11,7 +11,10 @@
 <body>
   <header class="header">
   <nav class="nav">
-    <a href="index.html" class="logo">BMB ELECTRONICS</a>
+    <a href="index.html" class="logo">
+      <img src="bmblogo.png" alt="BMB Logo" class="nav-logo">
+      
+    </a>
     <div class="menu-toggle" id="menu-toggle">
       <span></span>
       <span></span>
@@ -23,6 +26,7 @@
       <li><a href="linecard.html">Linecard</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
+    
   </nav>
 </header>
 
@@ -30,11 +34,11 @@
   <!-- Hero Section -->
   <section class="about-hero">
     <div class="about-container">
-      <h1>About BMB Electronics</h1>
-      <p>
+      <h1 class="fade-in-up" >About BMB Electronics</h1>
+      <p class="fade-in-up">
         BMB Electronics is a trusted Technology Representative, dedicated to helping leading technology companies expand their reach across Turkey, Eastern Europe, and the Middle East. With over 60 years of combined industry experience, the company serves as a reliable partner, offering not only innovative technological solutions but also deep technical expertise and strong commercial insight.
       </p>
-      <p>
+      <p class="fade-in-up">
         Composed entirely of skilled electronics engineers, BMB Electronics is committed to providing high-quality, customer‑focused services that drive sustainable growth, competitive advantage, and long‑term success for its partners. By combining technical excellence with strategic market knowledge, BMB ensures its partners gain a strong foothold and maintain resilience in competitive markets.
       </p>
     </div>
@@ -75,6 +79,34 @@
     navLinks.classList.toggle("active");
   });
 </script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  });
+</script>
+
 
 </body>
 </html>
