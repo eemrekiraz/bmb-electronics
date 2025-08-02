@@ -87,6 +87,15 @@
   <p>&copy; 2025 BMB Electronics. All rights reserved.</p>
 </footer>
 
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
 <script>
   window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
