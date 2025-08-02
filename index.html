@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
+
+<body>
+  </head>
 <body>
   <header class="header">
   <nav class="nav">
@@ -26,9 +29,10 @@
 </header>
 
 
+
   <section class="hero home-hero fade-in">
-    <h1>Innovative Electronic Solutions</h1>
-    <p>We represent leading technology companies to grow their businesses in Turkey, Eastern Europe, and the Middle East, providing not only access to new markets but also the technical expertise and strategic insight needed for long‑term success. Our commitment ensures strong partnerships and sustainable growth across these regions.
+    <h1 class="fade-in-up">Innovative Electronic Solutions</h1>
+    <p class="fade-in-up">We represent leading technology companies to grow their businesses in Turkey, Eastern Europe, and the Middle East, providing not only access to new markets but also the technical expertise and strategic insight needed for long‑term success. Our commitment ensures strong partnerships and sustainable growth across these regions.
 
 </p>
     <a href="linecard.html" class="cta-button">Explore Linecard</a>
@@ -64,9 +68,6 @@
 </section>
 
 
-
-
-
   <footer class="footer fade-in">
     <p>&copy; 2025 BMB Electronics. All rights reserved.</p>
   </footer>
@@ -79,6 +80,34 @@
     navLinks.classList.toggle("active");
   });
 </script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  });
+</script>
+
 
 </body>
 </html>
