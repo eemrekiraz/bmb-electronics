@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | BMB Electronics</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">BMB ELECTRONICS</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="company.html">About Us</a></li>
+      <li><a href="linecard.html">Linecard</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section class="hero home-hero fade-in">
+    <h1>Innovative Electronic Solutions</h1>
+    <p>We represent leading technology companies to grow their businesses in Turkey, Eastern Europe, and the Middle East, providing not only access to new markets but also the technical expertise and strategic insight needed for long‑term success. Our commitment ensures strong partnerships and sustainable growth across these regions.
+
+</p>
+    <a href="linecard.html" class="cta-button">Explore Linecard</a>
+  </section>
+
+ <section class="activity-section">
+  <h2>We Operate in These Countries</h2>
+  <div class="activity-content">
+    <div class="country-list">
+      <ul>
+        <li>Turkiye</li>
+        <li>Bulgaria</li>
+        <li>Romania</li>
+        <li>Greece</li>
+        <li>Hungary</li>
+        <li>Slovakia</li>
+        <li>Slovenia</li>
+        <li>Croatia</li>
+        <li>Albania</li>
+        <li>Serbia</li>
+        <li>Macedonia</li>
+        <li>Bosnia and Herzegovina</li>
+        <li>Egypt</li>
+        <li>Saudi Arabia</li>
+      </ul>
+    <div class="map-button">
+      <a href="company.html" class="cta-button">Learn More About Us</a>
+    </div>
+  </div>
+
+  <img src="Görüntü.jpeg" class="map-image" alt="Map">
+</div>
+</section>
+
+
+
+
+
+  <footer class="footer fade-in">
+    <p>&copy; 2025 BMB Electronics. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | BMB Electronics</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">BMB ELECTRONICS</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="company.html">About Us</a></li>
+      <li><a href="linecard.html">Linecard</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="hero contact-hero">
+  <h1>Get in Touch</h1>
+  <div class="contact-content">
+    <p>
+      <strong>Istanbul Office:</strong> 
+      <a href="https://www.google.com/maps?q=Akkom+Plaza+Ataşehir" target="_blank">
+        İnkılap, Dr. Adnan Büyükdeniz Cd. 4/2, Cessas Plaza Kat:10, 34768 Ümraniye/İstanbul
+      </a>
+    </p>
+    <p>
+      <strong>Ankara Office:</strong> Oran, Çankaya
+    </p>
+    <p>
+      <strong>Email:</strong> info@bmbelectronics.com
+    </p>
+    <p>
+      <strong>LinkedIn: </strong>
+      <a href="https://tr.linkedin.com/company/bmbelectronics" target="_blank">
+        BMB Electronics
+      </a>
+    </p>
+  </div>
+</section>
+
+<section class="contact-form">
+  <form id="contact-form">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="from_name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="reply_to" required />
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit" class="cta-button">Send</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 BMB Electronics. All rights reserved.</p>
+</footer>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // Buraya kendi key'in
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    console.log("📤 Sending form data...");
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(function(response) {
+        console.log("✅ SUCCESS!", response.status, response.text);
+        alert("✅ Message sent successfully!");
+      }, function(error) {
+        console.error("❌ FAILED...", error);
+        alert("❌ Failed to send: " + JSON.stringify(error));
+      });
+  });
+</script>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+
+</body>
+</html>

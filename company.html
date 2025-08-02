@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | BMB Electronics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">BMB ELECTRONICS</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="company.html">About Us</a></li>
+      <li><a href="linecard.html">Linecard</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-container">
+      <h1>About BMB Electronics</h1>
+      <p>
+        BMB Electronics is a trusted Technology Representative, dedicated to helping leading technology companies expand their reach across Turkey, Eastern Europe, and the Middle East. With over 60 years of combined industry experience, the company serves as a reliable partner, offering not only innovative technological solutions but also deep technical expertise and strong commercial insight.
+      </p>
+      <p>
+        Composed entirely of skilled electronics engineers, BMB Electronics is committed to providing high-quality, customer‑focused services that drive sustainable growth, competitive advantage, and long‑term success for its partners. By combining technical excellence with strategic market knowledge, BMB ensures its partners gain a strong foothold and maintain resilience in competitive markets.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Values Section -->
+ <section class="about-values">
+  <h2>Core Principles</h2>
+  <div class="values-container">
+    <div class="value-card">
+      <i class="fas fa-bullseye"></i>
+      <h3>Mission</h3>
+      <p>To empower leading technology companies with tailored strategies, enabling them to thrive in Turkey, Eastern Europe, and the Middle East.</p>
+    </div>
+    <div class="value-card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Vision</h3>
+      <p>To be the most reliable and innovative technology representative, creating long-term success for our partners worldwide.</p>
+    </div>
+    <div class="value-card">
+      <i class="fas fa-users"></i>
+      <h3>Strength</h3>
+      <p>With 60+ years of combined experience and a team of expert engineers, we deliver both technical excellence and strategic market knowledge.</p>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <p>&copy; 2025 BMB Electronics. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

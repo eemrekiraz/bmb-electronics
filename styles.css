@@ -1,0 +1,1656 @@
+/* ===================================
+   GLOBAL RESET & BASE STYLES
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* ===================================
+   HEADER & NAVBAR
+=================================== */
+.header {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #111;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #007aff;
+  border-bottom: 2px solid #007aff;
+}
+
+/* ===================================
+   HERO SECTIONS
+=================================== */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000;
+}
+
+/* HOME HERO */
+.hero.home-hero {
+  background: url("ChatGPT Image 29 Tem 2025 18_52_56.png") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+.hero.home-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(60, 58, 74, 0.6);
+  z-index: 1;
+}
+
+.hero.home-hero h1,
+.hero.home-hero p,
+.hero.home-hero a {
+  position: relative;
+  z-index: 2;
+}
+
+.hero.home-hero h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(133, 133, 133, 0.7);
+}
+
+.hero.home-hero p {
+  background: rgba(60, 58, 74, 0.6);
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 2px;
+  color: #ffffff;
+}
+
+/* CONTACT HERO */
+.hero.contact-hero {
+  background: url("Gecenin\ Işığındaki\ Ekiz\ Plaza.png") no-repeat center center;
+  background-size: 100%;
+  color: #fff;
+  position: relative;
+}
+
+.hero.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(28, 31, 49, 0.6);
+  z-index: 1;
+}
+
+.hero.contact-hero h1,
+.hero.contact-hero p,
+.hero.contact-hero .contact-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero.contact-hero .contact-content {
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+  color: #fff;
+}
+
+.hero.contact-hero .contact-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.hero.contact-hero p strong {
+  color: #fcfcfc;
+}
+
+/* ABOUT HERO */
+.hero.about-hero {
+  background: #2f374e;
+  color: #fefefe;
+}
+
+.hero.about-hero h1,
+.hero.about-hero p {
+  color: #fefefe;
+}
+
+/* PARTNERS HERO */
+.partners-hero {
+  background: url("Firefly_world map 845041.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.partners-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 36, 77, 0.827);
+  z-index: 1;
+}
+
+.partners-hero h1,
+.partners-hero p {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================================
+   CTA BUTTONS
+=================================== */
+.cta-button {
+  padding: 14px 32px;
+  background: #298ac2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #007aff;
+  color: #fff;
+}
+
+/* ===================================
+   ABOUT LIST
+=================================== */
+.about-list {
+  list-style: disc;
+  margin: 20px auto;
+  padding: 0 40px;
+  max-width: 800px;
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.about-list li {
+  margin-bottom: 12px;
+}
+
+/* ===================================
+   PRODUCT GRID & COMPANY CARDS
+=================================== */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 yerine 4 sütun */
+  gap: 30px; /* boşluğu biraz azalttık */
+  padding: 40px; /* daha kompakt */
+  justify-items: center;
+  background: linear-gradient(to bottom right, #fefefe, #f0f0f0);
+}
+
+.company-card {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 220px; /* 280px yerine daha küçük */
+  height: 200px; /* yükseklik de biraz küçüldü */
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.company-card img {
+  max-width: 100px; /* daha dar */
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.company-card:hover img {
+  transform: scale(1.08);
+}
+
+.company-card h3 {
+  font-size: 1.1rem; /* biraz küçüldü */
+  font-weight: 700;
+  color: #2a334b;
+  margin: 0;
+}
+
+.company-card a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive ayar */
+@media (max-width: 1200px) {
+  .company-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===================================
+   CONTACT FORM
+=================================== */
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 5px rgba(0, 122, 255, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Garantili Contact düzeni */
+.hero.contact-hero h1,
+.hero.contact-hero p,
+.hero.contact-hero strong {
+  color: #ffffff !important;
+}
+
+.partners-hero p {
+  color: #ffffff !important;
+}
+
+/* ===================================
+   COMPANY LOGO LEFT ONLY
+=================================== */
+.company-logo {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: block;
+  margin: 20px 0 20px 40px; /* sola yasla, soldan 40px boşluk */
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+.logo-wrapper {
+  width: 100%;
+  text-align: left;      /* logoyu sola yaslar */
+  padding-left: 40px;    /* soldan boşluk */
+}
+
+.company-logo {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: inline-block; /* artık sola yaslanır */
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+/* ===================================
+   FORCE COMPANY LOGOS TO LEFT
+=================================== */
+.company-logo {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: block;
+  margin: 20px auto 20px 40px; /* soldan boşluk, sağdan otomatik */
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+.hero.about-hero {
+  text-align: center; /* yazılar ortada kalsın */
+}
+
+.hero.about-hero .company-logo {
+  margin-left: 40px;   /* logolar sola */
+  margin-right: auto;  /* sağdan otomatik boşluk */
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start; /* logonun üstüyle yazı üstünü hizala */
+  gap: 40px;               /* logo ile yazı arasında boşluk */
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;        /* yazıyı sola hizala */
+}
+
+.company-logo {
+  flex-shrink: 0;          /* logonun boyutu sabit kalsın */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+.about-text {
+  flex: 1;                 /* kalan alanı kaplasın */
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.hero.about-hero {
+  display: flex;
+  flex-direction: row;    
+  align-items: flex-start; /* üstten hizala */
+  justify-content: flex-start;
+  text-align: left;       
+  gap: 180px;              /* logo ile yazı arası daha dar */
+  padding: 40px 60px;
+}
+
+.hero.about-hero .company-logo {
+  margin: 0;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+.hero.about-hero .text-block {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero.about-hero .text-block p {
+  margin-bottom: 20px; /* yazı ile buton arasında boşluk */
+}
+
+.hero.about-hero .cta-button {
+  align-self: flex-start; /* buton yazının altında sola hizalı */
+}
+
+.company-header {
+  text-align: left;
+  padding: 40px 60px 20px 60px;
+  background: none; /* navbar ile aynı arka plan */
+}
+
+.company-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2a334b;
+}
+
+.company-content {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.company-content .content-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+
+.company-header {
+  text-align: left;
+  padding: 40px 60px 10px 60px;
+  background: none; /* Navbar’ın altında normal arka plan */
+}
+
+.company-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2a334b;
+}
+
+.company-description {
+  padding: 20px 60px 60px 60px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+  max-width: 1000px;
+}
+
+.company-description ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style-type: disc;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.company-description li {
+  margin-bottom: 8px;
+}
+
+.company-description h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2a334b;
+  text-align: left;
+}
+
+.detailed-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.detailed-list li {
+  margin-bottom: 25px;
+}
+
+.detailed-list strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #2a334b;
+  margin-bottom: 8px;
+}
+
+.detailed-list p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  padding-left: 15px; /* açıklama başlıktan biraz içeride */
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end; /* sağ tarafa hizala */
+  margin-top: 20px;
+}
+
+.button-row .cta-button {
+  margin: 0;
+}
+
+.company-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 60px;
+}
+
+.company-content .left-column {
+  flex: 2;
+  text-align: left;
+}
+
+.company-content .right-column {
+  flex: 1;
+  text-align: center;
+}
+
+.company-content .right-column img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.detailed-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.detailed-list li {
+  margin-bottom: 20px;
+}
+
+.detailed-list strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #2a334b;
+  margin-bottom: 6px;
+}
+
+.detailed-list p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  padding-left: 15px;
+}
+
+.detailed-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+  gap: 20px 40px; /* satır ve sütun aralıkları */
+  list-style: none;
+  padding-left: 0;
+  margin: 40px 0;
+}
+
+.detailed-list li {
+  margin-bottom: 20px;
+}
+
+.detailed-list strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2a334b;
+  margin-bottom: 8px;
+}
+
+.detailed-list p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+@media (max-width: 992px) {
+  .detailed-list {
+    grid-template-columns: repeat(2, 1fr); /* tablet: 2 sütun */
+  }
+}
+
+@media (max-width: 600px) {
+  .detailed-list {
+    grid-template-columns: 1fr; /* telefon: 1 sütun */
+  }
+}
+.button-row {
+  display: flex;
+  justify-content: space-between; /* biri sola, biri sağa */
+  margin-top: 30px;
+}
+
+.back-button {
+  background: #298ac2; /* gri ton (isteğe göre) */
+}
+
+.back-button:hover {
+  background: #007aff;
+}
+
+/**********/
+
+.about-hero {
+  background: url("Firefly_toplantı\ masası\ şirket\ 965539.jpg") no-repeat center center/cover;
+  background-size: 100%;
+  position: relative;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: left; /* sola hizalı */
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(22, 35, 58, 0.8), rgba(11, 23, 44, 0.8));
+  z-index: 1; /* resmin üstüne yarı saydam degrade */
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* yazılar overlay üstünde görünsün */
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+/* Values Section */
+.about-values {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-values {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #2a334b;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.value-card i {
+  font-size: 2.8rem;
+  color: #007aff;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #2a334b;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-map {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.home-map h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2a334b;
+}
+
+.home-map .map-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map-image {
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.country-list ul {
+  list-style-type: square;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.country-list li {
+  margin-bottom: 8px;
+}
+
+.hero.contact-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* içerik soldan başlasın */
+  padding: 60px 60px;      /* soldan boşluk ekle */
+  position: relative;
+  color: #fff;
+}
+
+.hero.contact-hero h1 {
+  text-align: center;
+  width: 100%;  /* başlık yine ortada */
+  margin-bottom: 30px;
+}
+
+.hero.contact-hero .contact-content {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.hero.contact-hero .contact-content p {
+  white-space: nowrap;
+}
+
+.hero.contact-hero .contact-content a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 00;
+}
+
+.hero.contact-hero .contact-content a:hover {
+  text-decoration: underline;
+}
+
+
+.activity-section {
+  padding: 80px 40px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.activity-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2a334b;
+  font-weight: 800;
+}
+
+.activity-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.country-list ul {
+  list-style-type: square;
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: left;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.country-list li {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.map-container {
+  flex: 1;
+  text-align: center;
+}
+
+.map-image {
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.map-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-container {
+  flex: 1;
+  text-align: center;
+}
+
+.map-image {
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.map-button {
+  margin-top: 20px;
+}
+
+.map-button .cta-button {
+  padding: 14px 32px;
+  background: #298ac2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.map-button .cta-button:hover {
+  background: #007aff;
+  transform: scale(1.05);
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* resim üstte, buton altta */
+  align-items: center;    /* ortala */
+}
+
+.map-button {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .values-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .company-logo {
+    max-width: 120px;
+    margin: 10px auto;
+  }
+
+  .map-image {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  body .hero.about-hero {
+    background: #fff !important;
+    color: #111 !important;
+    width: 90% !important;
+    min-height: auto !important;
+    padding: 12px !important;
+    margin: 20px auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+    display: block !important;
+    text-align: left !important;
+  }
+
+  body .hero.about-hero h1 {
+    font-size: 0.9rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  body .hero.about-hero p {
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+    max-width: 100% !important;
+  }
+
+  body .hero.about-hero img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 8px 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    background: #ffffff !important; /* arka planı değiştir */
+    color: #ffffff !important;         /* yazıyı koyu yap */
+    width: 90% !important;
+    margin: 20px auto !important;
+    padding: 18px !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+  .about-hero h1 {
+    font-size: 1.1rem !important;
+    margin-bottom: 10px;
+  }
+
+  .about-hero p {
+    font-size: 0.85rem !important;
+    line-height: 1.5;
+  }
+
+  .about-hero img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 12px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-row .cta-button {
+    font-size: 0.8rem;       /* yazıyı küçült */
+    padding: 6px 12px;       /* buton iç boşluğunu azalt */
+    border-radius: 5px;      /* kenarları yumuşak */
+  }
+
+  .button-row {
+    gap: 8px;                /* butonlar arası mesafeyi azalt */
+    display: flex;
+    flex-direction: column;  /* butonları alt alta dizmek istersen */
+    align-items: center;
+  }
+}
+
+/* Hamburger Menü */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #111;
+  border-radius: 2px;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 15px;
+  }
+
+  .logo {
+    text-align: left !important;
+    margin: 0;
+    flex: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 200px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: right;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;     /* ekranın sağına sabitle */
+    top: 107px;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px 0 0 8px; /* sol köşeleri yuvarlat */
+    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    width: 220px;
+    z-index: 2000;       /* navbarın üstünde olsun */
+    align-items: flex-start;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 12px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    text-align: left;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 20px; /* kutular arası boşluk */
+    padding: 20px;
+  }
+
+  .company-card {
+    max-width: 100px;  /* kutuları daralt */
+    height: 140px;     /* mobil uyumlu yükseklik */
+    padding: 10px;
+  }
+
+  .company-card img {
+    max-width: 80px;
+    max-height: 60px;
+  }
+
+  .company-card h3 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero.contact-hero {
+    background: url("ChatGPT\ Image\ 2\ Ağu\ 2025\ 12_09_21.png") no-repeat center center/cover;
+  }
+}
+
+.home-map {
+  background: #f9f9f9;
+  padding: 40px 20px;     /* üst-alt boşluğu küçülttük */
+  text-align: center;
+}
+
+.home-map h2 {
+  font-size: 2rem;       /* başlık boyutunu küçülttük */
+  margin-bottom: 10px;
+  color: #2a334b;
+}
+
+.home-map .map-subtitle {
+  font-size: 1rem;       /* alt başlık küçüldü */
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;             /* harita ile liste arası boşluk küçüldü */
+  flex-wrap: wrap;
+  max-width: 900px;      /* genişlik sınırlandı */
+  margin: 0 auto;
+}
+
+.map-image {
+  max-width: 300px;      /* harita görselini küçülttük */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.country-list ul {
+  list-style-type: square;
+  font-size: 1rem;       /* yazı boyutu daha küçük */
+  line-height: 1.6;
+  color: #333;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.country-list li {
+  margin-bottom: 6px;
+}
+.country-list,
+.country-list ul,
+.map-container {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.country-list ul {
+  padding: 0 !important;    /* iç boşluğu kaldır */
+  margin: 0 !important;     /* dış boşluğu kaldır */
+  list-style-position: inside; /* işaretleri sola yasla */
+}
+@media (max-width: 768px) {
+  .country-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 10px 15px; /* satır ve sütun arası boşluk */
+    list-style: none; /* işaretleri kaldırmak istersen */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* yazılar ortalı */
+  }
+
+  .country-list li {
+    font-size: 0.7rem; /* daha kompakt yazı */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero.contact-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly; /* içerikleri eşit yay */
+    padding: 40px 20px;
+    min-height: 100vh; /* ekran yüksekliğini tamamen kapla */
+    text-align: left;
+  }
+
+  .hero.contact-hero h1 {
+    font-size: 1.7rem;
+    text-align: left;
+    color: #fff;
+    margin: 0; /* yukarı yapışsın */
+  }
+
+  .hero.contact-hero .contact-content {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    word-break: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* içerikleri de eşit yay */
+    flex: 1; /* tüm kalan alanı kullan */
+  }
+
+  .hero.contact-hero .contact-content p {
+    margin: 0; /* ekstra boşlukları kaldır */
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .hero.contact-hero .contact-content p {
+    white-space: normal !important;   /* satır sonlarında alta geçsin */
+    word-break: break-word !important;/* uzun kelimeler gerektiğinde bölünsün */
+    overflow-wrap: break-word !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero.contact-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around; /* boşlukları azalt */
+    padding: 30px 20px;
+    min-height: 80vh; /* resmi biraz kısalt */
+    text-align: left;
+  }
+
+  .hero.contact-hero h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .hero.contact-hero .contact-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* yazılar daha sık */
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero.contact-hero .contact-content p {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hero.home-hero h1 {
+    white-space: nowrap;      /* tek satırda kalsın */
+    font-size: 1.5rem;        /* mobil için küçült */
+    overflow: hidden;         /* taşarsa kes */
+    text-overflow: ellipsis;  /* çok uzun olursa "..." koyar */
+  }
+}
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #111;
+  text-decoration: none; /* link alt çizgisini kaldır */
+}
+/* Kart boyutunu bozmadan logoları büyütmek için */
+.company-card img.large-logo {
+  max-width: 150px;   /* normalde 100px'ti, büyüttük */
+  max-height: 110px;  /* yükseklik sınırını artırdık */
+}
+
+.company-card img.large-logo-a {
+  max-width: 200px;   /* normalde 100px'ti, büyüttük */
+  max-height: 150px;  /* yükseklik sınırını artırdık */
+}
+
+.company-card img.large-logo-n {
+  max-width: 170px;   /* normalde 100px'ti, büyüttük */
+  max-height: 120px;  /* yükseklik sınırını artırdık */
+}
+
+.company-card img.large-logo-s {
+  max-width: 120px;   /* normalde 100px'ti, büyüttük */
+  max-height: 100px;  /* yükseklik sınırını artırdık */
+}
+
+.company-card img.large-logo-ll {
+  max-width: 190px;   /* normalde 100px'ti, büyüttük */
+  max-height: 160px;  /* yükseklik sınırını artırdık */
+}
+.company-card img.large-logo-j {
+  max-width: 170px;   /* normalde 100px'ti, büyüttük */
+  max-height: 130px;  /* yükseklik sınırını artırdık */
+}
+
+@media (max-width: 768px) {
+  .company-card img.large-logo-n {
+    max-width: 100px;   /* mobilde küçült */
+    max-height: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .company-card img.large-logo-s {
+    max-width: 80px;   /* mobilde küçült */
+    max-height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .company-card img.large-logo {
+    max-width: 95px;   /* mobilde küçült */
+    max-height: 75px;
+  }
+}
+@media (max-width: 768px) {
+  .company-card img.large-logo-a {
+    max-width: 105px;   /* mobilde küçült */
+    max-height: 85px;
+  }
+}
+@media (max-width: 768px) {
+  .company-card img.large-logo-ll {
+    max-width: 150px;   /* mobilde küçült */
+    max-height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .company-card img.large-logo-j {
+    max-width: 120px;   /* mobilde küçült */
+    max-height: 100px;
+  }
+}
+.company-card img.large-logo-apogee {
+  max-width: 280px;   /* normalde 100px'ti, büyüttük */
+  max-height: 220px;  /* yükseklik sınırını artırdık */
+}
+@media (max-width: 768px) {
+  .company-card img.large-logo-apogee {
+    max-width: 180px;   /* mobilde küçült */
+    max-height: 150px;
+  }
+}
+
+
+.map-image {
+  max-width: 750px;      /* harita görselini küçülttük */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column; /* alt alta gelsin */
+  align-items: center;    /* ortala */
+  gap: 20px;
+}
+
+.country-list {
+  text-align: center;
+}
+
+.map-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-button .cta-button {
+  padding: 12px 28px;
+  background: #298ac2;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.map-button .cta-button:hover {
+  background: #007aff;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .hero.home-hero p {
+    background: rgba(36, 36, 36, 0.6); /* yarı saydam arka plan */
+    padding: 1px 1px;             /* iç boşluk */
+    border-radius: 0px;             /* köşeleri yumuşat */
+    max-width: 100%;                 /* satır genişliği kısıtla */
+    margin: 0px auto 0 auto;       /* ortala ama sağ-sol boşluk bırak */
+    font-size: 0.85rem;             /* mobil için uygun font */
+    line-height: 1.4;               /* rahat okunabilirlik */
+    text-align: left;               /* soldan sağa hizala */
+    color: #fff;                    /* kontrast için beyaz yazı */
+  }
+}
+
+.hero.home-hero .cta-button {
+  margin-top: 40px; /* yukarıdan boşluk ekler */
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    display: flex;
+    flex-direction: column; /* üst üste diz */
+    align-items: center;    /* ortala */
+    gap: 20px;              /* elemanlar arası boşluk */
+  }
+
+  .map-image {
+    max-width: 100%;        /* ekranı tam kullan */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .country-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+    gap: 10px 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .map-button {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .map-button .cta-button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .company-content {
+    flex-direction: column !important;   /* yan yana değil, alt alta */
+    align-items: flex-start !important;  /* sola hizala */
+    padding: 20px !important;            /* kenarlardan boşluk */
+  }
+
+  .company-content .left-column,
+  .company-content .full-column {
+    flex: 1 !important;
+    width: 100% !important;              /* tam genişlik */
+    text-align: left !important;         /* sola hizala */
+  }
+
+  .company-content p,
+  .company-description p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  .detailed-list {
+    grid-template-columns: 1fr !important; /* tek sütun */
+    gap: 15px !important;
+  }
+
+  .detailed-list p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    padding-left: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero.home-hero h1 {
+    font-size: 5vw; /* ekran genişliğine göre küçülür */
+    white-space: nowrap; /* tek satırda kalsın */
+  }
+}
