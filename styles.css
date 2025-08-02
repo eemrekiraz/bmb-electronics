@@ -1762,5 +1762,25 @@ textarea:focus {
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+  .home-header .logo {
+    margin-right: auto !important; /* hamburgeri sağa iter */
+    text-align: left !important;
+    white-space: nowrap !important; /* tek satır */
+    font-size: 1.2rem !important;
+    flex: 0 0 auto !important; /* logonun boyutu sabit */
+  }
+
+  .home-header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .home-header .menu-toggle {
+    margin-left: auto !important; /* hamburgeri en sağa al */
+  }
+}
 
 
