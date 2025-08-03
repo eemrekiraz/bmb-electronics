@@ -2038,6 +2038,31 @@ textarea:focus {
     font-weight: 500;
   }
 }
+@media (max-width: 768px) {
+  .country-list ul {
+    display: block !important;          /* tek sütun */
+    list-style-type: square !important; /* madde işareti */
+    list-style-position: inside !important;
+    text-align: left !important;        /* sola hizala */
+    padding-left: 20px !important;
+    margin: 0 auto !important;
+    width: 90% !important;              /* sayfa genişliğinin %90'ı */
+  }
+
+  .country-list li {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;        /* her li sola hizalı */
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-section .cta-button {
+    margin-top: 35px !important; /* liste ile buton arasına boşluk */
+    display: block;
+  }
+}
 
 
 
