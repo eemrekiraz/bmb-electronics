@@ -1782,5 +1782,54 @@ textarea:focus {
     margin-left: auto !important; /* hamburgeri en sağa al */
   }
 }
+/* NAVBAR düzenlemesi: linkler logonun yanında ve tüm navbara yayılsın */
+.nav {
+  display: flex;
+  justify-content: space-between; /* logo sola, menü sağa */
+  align-items: center;
+  width: 100%;
+}
 
+.logo {
+  flex: 0 0 auto;          /* logonun genişliği sabit */
+  margin-right: auto;      /* linkleri sağa iter */
+  text-align: left;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* sağa hizala */
+  align-items: center;
+  gap: 50px;                 /* linkler arası boşluk */
+  margin-left: auto;         /* logodan sonra başlat */
+  flex: 1;                   /* nav’ın sağını kaplasın */
+}
+/* --- Mobil Menü Düzenlemesi --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;       /* varsayılan kapalı */
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    width: 220px;
+    z-index: 2000;
+    align-items: flex-start;
+  }
+
+  .nav-links.active {
+    display: flex !important;       /* sadece aktifken açık */
+  }
+}
+@media (max-width: 768px) {
+.nav {
+  display: flex;
+  justify-content: space-between; /* logo sola, menü sağa */
+  align-items: center;
+  width: 80%;
+}}
 
