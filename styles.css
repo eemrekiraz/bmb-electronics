@@ -2041,7 +2041,6 @@ textarea:focus {
 @media (max-width: 768px) {
   .country-list ul {
     display: block !important;          /* tek sütun */
-    list-style-type: square !important; /* madde işareti */
     list-style-position: inside !important;
     text-align: left !important;        /* sola hizala */
     padding-left: 20px !important;
