@@ -30,7 +30,7 @@
 
 
 <section class="hero contact-hero">
-  <h1>Get in Touch</h1>
+  <h1 class="fade-in-up">Get in Touch</h1>
   <div class="contact-content">
     <p>
       <strong>Istanbul Office:</strong> 
@@ -73,31 +73,27 @@
 </footer>
 
 <!-- EmailJS Script -->
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+<script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    // EmailJS init
-    emailjs.init("n1Mdpo9okGfY8gF9T");
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // Buraya kendi key'in
+  })();
 
-    // Form gönderimi
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-      console.log("Form gönderiliyor...");
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-      emailjs.sendForm("service_4jhu3jf", "template_x8ys2rq", this)
-        .then(function(response) {
-          console.log("✅ SUCCESS!", response.status, response.text);
-          alert("✅ Message sent successfully!");
-        }, function(error) {
-          console.error("❌ FAILED...", error);
-          alert("❌ Failed to send: " + JSON.stringify(error));
-        });
-    });
+    console.log("📤 Sending form data...");
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+      .then(function(response) {
+        console.log("✅ SUCCESS!", response.status, response.text);
+        alert("✅ Message sent successfully!");
+      }, function(error) {
+        console.error("❌ FAILED...", error);
+        alert("❌ Failed to send: " + JSON.stringify(error));
+      });
   });
 </script>
-
 
 <script>
   const menuToggle = document.getElementById("menu-toggle");
