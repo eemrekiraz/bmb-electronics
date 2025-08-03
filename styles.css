@@ -1988,9 +1988,9 @@ textarea:focus {
   }
 
   .map-image {
-    width: 80% !important;
+    width: 100% !important;
     height: auto !important;
-    margin: 0 auto 15px auto !important;
+    margin: 0 auto 30px auto !important;
     display: block !important;
   }
 
