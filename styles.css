@@ -1782,6 +1782,7 @@ textarea:focus {
     margin-left: auto !important; /* hamburgeri en sağa al */
   }
 }
+
 /* NAVBAR düzenlemesi: linkler logonun yanında ve tüm navbara yayılsın */
 .nav {
   display: flex;
@@ -1832,4 +1833,5 @@ textarea:focus {
   align-items: center;
   width: 80%;
 }}
+
 
