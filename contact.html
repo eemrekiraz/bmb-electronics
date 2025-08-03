@@ -73,27 +73,31 @@
 </footer>
 
 <!-- EmailJS Script -->
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 <script>
-  (function(){
-    emailjs.init("n1Mdpo9okGfY8gF9T"); // Buraya kendi key'in public key
-  })();
+  window.addEventListener("DOMContentLoaded", () => {
+    // EmailJS init
+    emailjs.init("n1Mdpo9okGfY8gF9T");
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    // Form gönderimi
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      console.log("Form gönderiliyor...");
 
-    console.log("📤 Sending form data...");
-
-    emailjs.sendForm("service_4jhu3jf", "template_x8ys2rq", this) // sevice id, template id
-      .then(function(response) {
-        console.log("✅ SUCCESS!", response.status, response.text);
-        alert("✅ Message sent successfully!");
-      }, function(error) {
-        console.error("❌ FAILED...", error);
-        alert("❌ Failed to send: " + JSON.stringify(error));
-      });
+      emailjs.sendForm("service_4jhu3jf", "template_x8ys2rq", this)
+        .then(function(response) {
+          console.log("✅ SUCCESS!", response.status, response.text);
+          alert("✅ Message sent successfully!");
+        }, function(error) {
+          console.error("❌ FAILED...", error);
+          alert("❌ Failed to send: " + JSON.stringify(error));
+        });
+    });
   });
 </script>
+
 
 <script>
   const menuToggle = document.getElementById("menu-toggle");
