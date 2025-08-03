@@ -2063,7 +2063,7 @@ textarea:focus {
   }
 }
 
-media (max-width: 768px) {
+@media (max-width: 768px) {
   .about-hero {
     position: relative;
     background: url("aboutmobil.png") no-repeat center center/cover !important;
