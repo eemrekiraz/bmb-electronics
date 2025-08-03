@@ -137,7 +137,7 @@ body {
 
 /* CONTACT HERO */
 .hero.contact-hero {
-  background: url("Gecenin\ Işığındaki\ Ekiz\ Plaza.png") no-repeat center center;
+  background: url("iiiii.jpg") no-repeat center center;
   background-size: 100%;
   color: #fff;
   position: relative;
@@ -147,9 +147,10 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(28, 31, 49, 0.6);
+  background: rgba(3, 28, 82, 0.6);
   z-index: 1;
 }
+
 
 .hero.contact-hero h1,
 .hero.contact-hero p,
@@ -187,11 +188,11 @@ body {
 
 /* PARTNERS HERO */
 .partners-hero {
-  background: url("Firefly_world map 845041.jpg") no-repeat center center;
+  background: url("bbb.jpg") no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: #ffffff;
   position: relative;
-  min-height: 40vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1277,7 +1278,7 @@ textarea:focus {
 }
 @media (max-width: 768px) {
   .hero.contact-hero {
-    background: url("ChatGPT\ Image\ 2\ Ağu\ 2025\ 12_09_21.png") no-repeat center center/cover;
+    background: url("iiiii.jpg") no-repeat center center/cover;
   }
 }
 
@@ -1833,5 +1834,210 @@ textarea:focus {
   align-items: center;
   width: 80%;
 }}
+
+/* Mobilde Contact (Get in Touch) küçültme */
+@media (max-width: 768px) {
+  .hero.contact-hero {
+    padding: 60px 40px !important;   /* üst-alt boşlukları azalt */
+    min-height: auto !important;     /* ekranın tamamını kaplamasın */
+  }
+
+  .hero.contact-hero h1 {
+    font-size: 1.5rem !important;    /* başlığı küçült */
+    margin-bottom: 40px !important;
+  }
+
+  .hero.contact-hero .contact-content {
+    font-size: 0.85rem !important;   /* metin boyutunu küçült */
+    line-height: 1.9 !important;
+  }
+
+  .hero.contact-hero .contact-content p {
+    margin-bottom: 13px !important;   /* paragraflar arası boşluğu azalt */
+  }
+}
+
+.map-section {
+  padding: 30px 20px;
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.map-container {
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: flex-start;
+  gap: 50px; /* liste ile harita arasındaki boşluk */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activity-header h2 {
+  
+  font-size: 2rem;
+  color: #2a334b;
+  font-weight: 800;
+  margin-bottom: 70px;
+}
+
+.country-list ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 sütun */
+  gap: 30px 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.country-list li {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 600;
+  position: relative;
+  padding-left: 14px;
+}
+
+.country-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007aff;
+}
+
+.map-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.map-image {
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.map-wrapper .country-list {
+  margin-left: 80px; /* listeyi haritadan uzaklaştırır */
+}
+
+
+@media (max-width: 768px) {
+  .map-container {
+    display: flex;
+    flex-direction: column;  /* üst üste */
+    align-items: center;     /* ortala */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .map-image {
+    width: 180px;    /* sabit genişlik */
+    height: 120px;   /* sabit yükseklik → boydan da küçültür */
+    object-fit: contain;  /* orantıyı koruyarak kırpmadan sığdırır */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .country-list {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .country-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.000001rem;  /* küçücük font */
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .country-list li {
+    margin: 0;
+  }
+
+  .map-button {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .map-button .cta-button {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .map-wrapper {
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .map-image {
+    width: 80% !important;
+    height: auto !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+  }
+
+  .country-list {
+    width: 90% !important;
+    margin: 0 auto 15px auto !important;
+    font-size: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  .country-list ul {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    list-style: none !important;
+  }
+
+  .country-list li {
+    margin-bottom: 6px !important;
+  }
+
+  .map-button {
+    margin: 15px auto 0 auto !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .map-button .cta-button {
+    font-size: 0.8rem !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+  }
+  .country-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 sütun */
+    gap: 10px 15px; /* satır ve sütun araları */
+    list-style: none; /* işaretleri kaldırabilirsin */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .country-list li {
+    font-size: 0.8rem;  /* mobil için yazı küçült */
+    font-weight: 500;
+  }
+}
+
 
 
