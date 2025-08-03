@@ -2090,4 +2090,12 @@ textarea:focus {
     color: #fff !important; /* yazılar beyaz */
   }
 }
+.special-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;   /* bold */
+  font-size: 3rem;  /* boyut */
+  color: #ffffff;     /* renk */
+  text-align: center; /* isteğe bağlı */
+  margin-bottom: 20px;
+}
 
