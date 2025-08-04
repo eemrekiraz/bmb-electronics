@@ -2139,4 +2139,14 @@ textarea:focus {
   }
 }
 }
+@media (max-width: 768px) {
+  .company-header {
+    padding: 20px 15px 10px 15px !important; /* soldan 15px */
+  }
 
+  .company-header h1 {
+    font-size: 1.5rem !important;
+    text-align: left !important;
+    margin: 3 !important;
+  }
+}
