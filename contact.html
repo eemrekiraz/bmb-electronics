@@ -78,7 +78,7 @@
 <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // Buraya kendi key'in
+    emailjs.init("n1Mdpo9okGfY8gF9T"); // Buraya kendi key'in
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -86,7 +86,7 @@
 
     console.log("📤 Sending form data...");
 
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    emailjs.sendForm("service_4jhu3jf", "template_x8ys2rq", this)
       .then(function(response) {
         console.log("✅ SUCCESS!", response.status, response.text);
         alert("✅ Message sent successfully!");
