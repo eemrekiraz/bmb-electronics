@@ -2098,4 +2098,45 @@ textarea:focus {
   text-align: center; /* isteğe bağlı */
   margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+  .nav-links {
+    width: 220px; /* menü genişliği */
+    padding: 0;   /* kenar boşluklarını sıfırla */
+  }
+
+  .nav-links li {
+    width: 100%; /* liste elemanı menü genişliğini kaplasın */
+    margin: 0;   /* kutular arası boşluk kalksın */
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;             /* link tüm kutuyu kaplasın */
+    padding: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd; /* kutular arası ince çizgi */
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: left;         /* yazıları sola hizala */
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  
+  .nav-links li:first-child a {
+    margin-top: 30px;  /* istediğin boşluğu ver */
+  }
+
+  @media (max-width: 768px) {
+  .nav-links li {
+    margin: 1.5px 0; /* dikey boşluğu azalttık */
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 12px; /* kutuların iç boşluğunu küçülttük */
+    font-size: 0.9rem; /* yazıyı biraz küçültmek için */
+  }
+}
+}
 
