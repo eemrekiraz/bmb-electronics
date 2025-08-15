@@ -2150,3 +2150,121 @@ textarea:focus {
     margin: 3 !important;
   }
 }
+
+/* Sayfayı tam ekran yap ve sütun flex layout kullan */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100dvh;          /* mobil tarayıcı adres çubuğu sorunlarını da çözer */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ana içerik esnesin, footer’ı alta itsin */
+.site-main {
+  flex: 1 0 auto;              /* kalan yüksekliği alsın */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer otomatik olarak en alta gider */
+.footer {
+  margin-top: auto;
+}
+/* === ABOUT HERO GÖRSEL + YAZI GÖRÜNÜRLÜK YAMASI === */
+:root {
+  /* Buraya kendi görsel dosya adını koy, boşluk varsa %20 ile yaz */
+  --about-hero-img: url("Firefly_toplantı%20masası%20şirket%20965539.jpg");
+}
+
+.about-hero {
+  position: relative !important;
+  background-image: var(--about-hero-img) !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  min-height: 80vh !important; /* yüksekliği arttırdım */
+  padding: 80px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* dikey ortala */
+}
+
+.about-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(135deg, rgba(22,35,58,0.80), rgba(11,23,44,0.80)) !important;
+  z-index: 1 !important;
+}
+
+.about-hero .about-container {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+}
+
+.about-hero h1,
+.about-hero p {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* Mobilde de tam görünmesi için */
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 70vh !important;
+    padding: 60px 15px !important;
+    background-image: var(--about-hero-img) !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+/* Alt kısım telefon satırı */
+.bottom-phone {
+  background: linear-gradient(135deg, #135276 0%, #092a4e 100%);
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-phone i {
+  font-size: 1.2rem;
+}
+
+.bottom-phone a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bottom-phone a:hover {
+  text-decoration: underline;
+}
+
+/* Mobilde yazı boyutunu küçült */
+@media (max-width: 768px) {
+  .bottom-phone {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 768px) {
+  .bottom-phone {
+    padding: 25px 0 !important; /* yüksekliği arttırır */
+    font-size: 1rem !important; /* yazı boyutunu büyütür */
+    gap: 12px !important; /* ikon ile yazı arasını açar */
+  }
+
+  .bottom-phone i {
+    font-size: 1rem !important; /* ikon büyüklüğü */
+  }
+}
